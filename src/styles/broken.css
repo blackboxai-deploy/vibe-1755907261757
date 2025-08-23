@@ -1,0 +1,47 @@
+/* CSS with syntax errors */
+
+.broken-selector {
+  color: #invalid-color;
+  background: gradient(invalid-syntax);
+  margin: 10px 20px 30px; /* Missing 4th value for shorthand */
+  font-size: 16px;
+  /* Missing closing brace */
+
+.another-broken-class {
+  display: invalid-display-value;
+  position: not-a-position;
+  z-index: not-a-number;
+  
+  /* Invalid at-rule */
+  @invalid-rule {
+    color: red;
+  }
+}
+
+/* Invalid media query */
+@media screen and (max-width 768px) { /* Missing colon */
+  .responsive {
+    display: none;
+  }
+}
+
+/* Invalid keyframes */
+@keyframes broken-animation {
+  from {
+    opacity: 1;
+  /* Missing closing brace */
+  
+  to {
+    opacity: 0;
+  }
+}
+
+/* Selector with syntax error */
+.class1 .class2 > {
+  color: blue;
+}
+
+/* Invalid pseudo-element */
+.element::invalid-pseudo {
+  content: "broken";
+}
